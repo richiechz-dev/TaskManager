@@ -1,18 +1,32 @@
-'''Crear una clase
+"""Crear una clase
 
-Debe contener 4 funciones 
+Debe contener 4 funciones
 1. Agregar nueva tarea
 2. Marcar como completada
 3. Mostrar todas las tareas
 4. Eliminar tarea
-'''
+"""
+
 
 class TaskManager:
-    
     # Este es el constructor que va a inicilizarse cada vez que se cree una instancia de la clase TaskManager
+    # El constructor inicializa el estado del objeto
+    # Con self creamos estos atributos
+    # Creamos una lista de diccionarios
     def __init__(self):
-        pass
-    
+        self.tasks = []
+        self.next_task_id = 1
+
     # Creamos las funciones de la clase
-    def add_task(self):
-        pass
+    def add_task(self, description):
+        # Creamos la tarea
+        task = {
+            "id": self.next_task_id,
+            "description": description,
+            "status": False,
+        }
+        # Agregamos la tarea a la lista con el metodo append
+        self.tasks.append(task)
+        # Autoincrementamos el id para la siguente tarea
+        self.next_task_id = self.next_task_id + 1  # De esta forma
+        print("Tarea Agregada")
