@@ -52,3 +52,12 @@ class TaskManager:
                     )
         else:
             print("No hay tareas que mostrar")
+
+    def delete_task(self, id_task):
+        #for task in self.tasks:
+           #if task["id"] == id_task:
+        for i in range(len(self.tasks)):
+            element = self.tasks[i]
+            if element['id'] == id_task:
+                self.tasks.pop(i)
+                
