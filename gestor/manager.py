@@ -15,18 +15,25 @@ class TaskManager:
     # Creamos una lista de diccionarios
     def __init__(self):
         self.tasks = []
-        self.next_task_id = 1
+        self.next_id_task = 1
 
     # Creamos las funciones de la clase
     def add_task(self, description):
         # Creamos la tarea
         task = {
-            "id": self.next_task_id,
+            "id": self.next_id_task,
             "description": description,
             "status": False,
         }
         # Agregamos la tarea a la lista con el metodo append
         self.tasks.append(task)
         # Autoincrementamos el id para la siguente tarea
-        self.next_task_id = self.next_task_id + 1  # De esta forma
+        self.next_id_task = self.next_id_task + 1
         print("Tarea Agregada")
+
+    def complete_task(self, id_task):
+        for task in self.tasks:
+            if task["id"] == id_task:
+                task["id"] = True
+                return
+        print("No se encontro la tarea")
