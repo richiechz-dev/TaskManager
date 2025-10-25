@@ -34,6 +34,21 @@ class TaskManager:
     def complete_task(self, id_task):
         for task in self.tasks:
             if task["id"] == id_task:
-                task["id"] = True
+                task["status"] = True
                 return
         print("No se encontro la tarea")
+
+    def show_tasks(self):
+        print("Lista de tareas")
+        if self.tasks:
+            for task in self.tasks:
+                if task["status"] == True:
+                    print(
+                        f"Id: {task['id']} / Desc: {task['description']} / Estado: Completada"
+                    )
+                else:
+                    print(
+                        f"Id: {task['id']} / Desc: {task['description']} / Estado: No Completada"
+                    )
+        else:
+            print("No hay tareas que mostrar")
