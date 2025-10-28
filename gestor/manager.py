@@ -1,10 +1,9 @@
-"""Crear una clase
-
-Debe contener 4 funciones
-1. Agregar nueva tarea
-2. Marcar como completada
-3. Mostrar todas las tareas
-4. Eliminar tarea
+"""
+Clase TaskManager
+Al crear una instancia permite utilizar los metodos:
+    - add_task
+    - complete_task
+    - show_tasks
 """
 
 
@@ -52,7 +51,8 @@ class TaskManager:
                     )
         else:
             print("No hay tareas que mostrar")
-
+            
+''' WIP - metodo eliminar tarea
     def delete_task(self, id_task):
         #for task in self.tasks:
            #if task["id"] == id_task:
@@ -60,4 +60,4 @@ class TaskManager:
             element = self.tasks[i]
             if element['id'] == id_task:
                 self.tasks.pop(i)
-                
+'''              
