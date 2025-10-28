@@ -63,19 +63,25 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
         ```bash
         source .venv/bin/activate
         ```
-
+5. **Instala las dependencias:**
+    ```bash
+    uv sync
+    ```
+    
 ## Uso
 
 Para ejecutar la aplicación, asegúrate de tener el entorno virtual activado y corre el siguiente comando desde el directorio raíz del proyecto:
 
 ```bash
-python main.py
+uv run main.py
 ```
+
 O en caso contrario , puede ejecutar el siguiente comando:
 
 ```bash
-uv run main.py
+python main.py
 ```
+
 
 Aparecerá un menú interactivo que te permitirá elegir entre las diferentes opciones disponibles.
 
