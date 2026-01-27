@@ -1,11 +1,21 @@
-"""Crear una clase
-
-Debe contener 4 funciones
-1. Agregar nueva tarea
-2. Marcar como completada
-3. Mostrar todas las tareas
-4. Eliminar tarea
 """
+Clase TaskManager
+Al crear una instancia permite utilizar los metodos:
+    - add_task
+    - complete_task
+    - show_tasks
+"""
+def log_action(func):
+    """
+    Este decorador imprime un mensaje antes y después de ejecutar
+    una función del gestor de tareas.
+    """
+    def wrapper(*args, **kwargs):
+        print(f"--- Acción iniciada: {func.__name__} ---")
+        result = func(*args, **kwargs)
+        print(f"--- Acción finalizada: {func.__name__} ---")
+        return result
+    return wrapper
 
 
 class TaskManager:
@@ -18,6 +28,7 @@ class TaskManager:
         self.next_id_task = 1
 
     # Creamos las funciones de la clase
+    @log_action
     def add_task(self, description):
         # Creamos la tarea
         task = {
@@ -31,6 +42,7 @@ class TaskManager:
         self.next_id_task = self.next_id_task + 1
         print("Tarea Agregada")
 
+    @log_action
     def complete_task(self, id_task):
         for task in self.tasks:
             if task["id"] == id_task:
@@ -38,6 +50,7 @@ class TaskManager:
                 return
         print("No se encontro la tarea")
 
+    @log_action
     def show_tasks(self):
         print("Lista de tareas")
         if self.tasks:
@@ -52,7 +65,8 @@ class TaskManager:
                     )
         else:
             print("No hay tareas que mostrar")
-
+            
+''' WIP - metodo eliminar tarea
     def delete_task(self, id_task):
         #for task in self.tasks:
            #if task["id"] == id_task:
@@ -60,4 +74,4 @@ class TaskManager:
             element = self.tasks[i]
             if element['id'] == id_task:
                 self.tasks.pop(i)
-                
+'''              
