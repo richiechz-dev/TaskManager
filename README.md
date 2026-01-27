@@ -69,5 +69,4 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 Ahora aparecerá un menú interactivo que te permitirá elegir entre las diferentes opciones disponibles.
 
 ## Autor
-- **Ricardo Chavez**
-- [GitHub](https://github.com/richiechz-dev)
+- [Ricardo Chavez](https://github.com/richiechz-dev)
