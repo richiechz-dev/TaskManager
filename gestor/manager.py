@@ -55,7 +55,7 @@ class TaskManager:
         print("Lista de tareas")
         if self.tasks:
             for task in self.tasks:
-                if task["status"] == True:
+                if task["status"]:  # if task["status"]: --> directamente es True
                     print(
                         f"Id: {task['id']} / Desc: {task['description']} / Estado: Completada"
                     )
@@ -68,10 +68,4 @@ class TaskManager:
             
 ''' WIP - metodo eliminar tarea
     def delete_task(self, id_task):
-        #for task in self.tasks:
-           #if task["id"] == id_task:
-        for i in range(len(self.tasks)):
-            element = self.tasks[i]
-            if element['id'] == id_task:
-                self.tasks.pop(i)
 '''              
