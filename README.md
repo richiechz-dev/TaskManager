@@ -1,10 +1,10 @@
 # TaskManager
 
 ## Descripción
-Una herramienta de línea de comandos para gestionar tareas de forma eficiente. Este proyecto fue desarrollado como parte de mi aprendizaje personal para el desarrollo usando de Python, incluyendo la aplicación de principios de Programación Orientada a Objetos y la gestión de módulos.
+Una herramienta de línea de comandos para gestionar tareas de forma eficiente. Este proyecto fue desarrollado como parte de mi aprendizaje personal usando el core de Python resolviendo algunas lagunas practicas, incluyendo la aplicación de principios de Programación Orientada a Objetos y la gestión de módulos.
 
 ## Mejoras a Futuro
-- Implementar persistencia de datos utilizando una base de datos SQLite mediante un ORM como sqlalchemy (Ganando felixibiladad y escalabilidad a otro tipo de bd).
+- Implementar persistencia de datos utilizando una base de datos SQLite mediante un ORM como sqlalchemy (Ganando felixibiladad y escalabilidad a otro tipo de bd como PostgreSQL o MySQL).
 
 ## Características Principales
 - **Añadir nuevas tareas**: Agrega tareas con una descripción detallada.
@@ -29,7 +29,7 @@ El proyecto está estructurado en dos componentes principales:
 ## Aprendizaje y Conceptos Clave
 Durante el desarrollo de este proyecto, apliqué y reforcé los siguientes conceptos:
 
-- **Programación Orientada a Objetos (POO)**: La lógica principal está encapsulada en la clase `TaskManager`, utilizando constructores (`__init__`), atributos (`self.tasks`) y métodos para organizar el código de manera cohesiva y reutilizable.
+- **Programación Orientada a Objetos (POO)**: La lógica principal está encapsulada en la clase `TaskManager`, utilizando constructores (`__init__`), atributos (`self.tasks`) y métodos para organizar el código de manera reutilizable.
 - **Gestión de Módulos y Paquetes**: El proyecto está estructurado como un paquete de Python (`gestor`), lo que permite una separación clara de responsabilidades y facilita la importación de la clase `TaskManager` en el script principal.
 - **Entornos Virtuales**: Se utilizó `uv` para crear un entorno virtual aislado, asegurando que las dependencias del proyecto no entren en conflicto con otros proyectos de Python en el sistema.
 - **Manejo de Entrada/Salida (I/O)**: La aplicación interactúa con el usuario a través de la línea de comandos, capturando entradas (`input()`) y mostrando información (`print()`), además de gestionar errores básicos de entrada.
@@ -39,9 +39,9 @@ Durante el desarrollo de este proyecto, apliqué y reforcé los siguientes conce
 
 ## Requisitos Previos
 - Tener `Python 3.13+` instalado en tu sistema.
-- Se recomienda el gestor de entornos virtuales `uv`.
+- Se recomienda el gestor de entornos virtuales y paquetes `uv`.
 
-## Instalación
+## Instalación con UV
 
 Sigue estos pasos para configurar el proyecto en tu máquina local:
 
@@ -57,39 +57,17 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
     ```bash
     uv venv
     ```
-4.  **Activa el entorno virtual:**
-    -   En Windows:
-        ```bash
-        .venv\Scripts\activate
-        ```
-    -   En macOS/Linux:
-        ```bash
-        source .venv/bin/activate
-        ```
-5. **Instala las dependencias:**
+4.  **Arracta directamente - Este paso deberia instalar las dependencias e iniciar el entorno virtual autmaticamente**
+    ```bash
+    uv run main.py
+    ```
+5.  **Opcional en caso de error - Instala las dependencias con este comando primero**
     ```bash
     uv sync
     ```
-    
-## Uso
 
-Para ejecutar la aplicación, asegúrate de tener el entorno virtual activado y corre el siguiente comando desde el directorio raíz del proyecto:
-
-```bash
-uv run main.py
-```
-
-O en caso contrario , puede ejecutar el siguiente comando:
-
-```bash
-python main.py
-```
-
-
-Aparecerá un menú interactivo que te permitirá elegir entre las diferentes opciones disponibles.
+Ahora aparecerá un menú interactivo que te permitirá elegir entre las diferentes opciones disponibles.
 
 ## Autor
 - **Ricardo Chavez**
-
-## Licencia
-Este proyecto está bajo la licencia MIT.
+- [GitHub](https://github.com/richiechz-dev)
