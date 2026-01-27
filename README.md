@@ -1,7 +1,10 @@
 # TaskManager
 
 ## Descripción
-Una herramienta de línea de comandos para gestionar tareas de forma eficiente. Este proyecto fue desarrollado como parte de mi portafolio profesional para demostrar mis habilidades en desarrollo con Python, incluyendo la aplicación de principios de Programación Orientada a Objetos y la gestión de módulos.
+Una herramienta de línea de comandos para gestionar tareas de forma eficiente. Este proyecto fue desarrollado como parte de mi aprendizaje personal para el desarrollo usando de Python, incluyendo la aplicación de principios de Programación Orientada a Objetos y la gestión de módulos.
+
+## Mejoras a Futuro
+- Implementar persistencia de datos utilizando una base de datos SQLite mediante un ORM como sqlalchemy (Ganando felixibiladad y escalabilidad a otro tipo de bd).
 
 ## Características Principales
 - **Añadir nuevas tareas**: Agrega tareas con una descripción detallada.
